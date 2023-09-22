@@ -31,22 +31,10 @@ namespace NhapLieuSV
 
         }
 
-        private int GetSelectedRow(string stdID)
-        {
-            for (int i = 0; i < dgvStudent.Rows.Count; i++)
-            {
-                if (dgvStudent.Rows[i].Cells[0].Value?.ToString() == stdID)
-                {
-                    return i;
-                }
-
-            }
-            return -1;
-        }
+        
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            int selectedRow = GetSelectedRow(txtStdName.Text);
 
             if (txtStdID.Text=="" || txtStdName.Text=="" || txtAvgScore.Text == "" || cmbFaculty.Text == "")
             {
